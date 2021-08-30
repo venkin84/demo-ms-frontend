@@ -93,19 +93,23 @@ export default {
     })
   },
   async mounted() {
-    this.reasons = await this.$axios.get('/ticket/typology', {
-      headers: {
-        'Content-Type': 'appliction/json',
-        'client-ref': 'client-webapp',
-        'requested-datetime': Math.floor(new Date().getTime() / 1000),
-      },
-    })
+    // this.reasons = await this.$axios.get('/ticket/typology', {
+    this.reasons = await this.$axios.get(
+      'https://jsonplaceholder.typicode.com/comments',
+      {
+        headers: {
+          'Content-Type': 'appliction/json',
+          'client-ref': 'client-webapp',
+          'requested-datetime': Math.floor(new Date().getTime() / 1000),
+        },
+      }
+    )
     console.log('Response from jsonplaceholder', this.reasons)
 
     const choices = this.reasons.data.map((reason) => {
       return {
-        text: reason.ticketTypologyName,
-        value: reason.ticketTypologyId,
+        text: reason.name,
+        value: reason.id,
       }
     })
 
