@@ -1,0 +1,45 @@
+{
+    "completedHtml": "Thank you for reaching out to us. We will get back to you Shortly!",
+    "pages": [
+        {
+            "name": "page1",
+            "elements": [
+                {
+                    "type": "dropdown",
+                    "name": "question1",
+                    "title": "Contact reason",
+                    "isRequired": true
+                },
+                {
+                    "type": "comment",
+                    "name": "question6",
+                    "visibleIf": "{question1} equals 2",
+                    "title": "Specify more information about the Typology 2"
+                },
+                {
+                    "type": "text",
+                    "name": "question2",
+                    "title": "Email address",
+                    "isRequired": true
+                },
+                {
+                    "type": "text",
+                    "name": "question3",
+                    "title": "First name",
+                    "isRequired": true
+                },
+                {
+                    "type": "text",
+                    "name": "question4",
+                    "title": "Surname",
+                    "isRequired": true
+                },
+                {
+                    "type": "comment",
+                    "name": "question5",
+                    "title": "Issue description"
+                }
+            ]
+        }
+    ]
+}

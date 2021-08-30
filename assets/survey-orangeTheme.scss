@@ -1,0 +1,184 @@
+$header-background-color: #e7e7e7;
+$body-container-background-color: #f4f4f4;
+
+$font-family: $body-font-family;
+
+$main-color: #ff7900;
+$main-hover-color: #9f9f9f;
+$body-background-color: #fcfcfc;
+$inputs-background-color: #fff;
+$text-color: #333333;
+$progress-text-color: #9d9d9d;
+$header-color: $text-color;
+$text-border-color: #d4d4d4;
+$dropdown-border-color: $text-border-color;
+$border-color: #dcdcdc;
+$radio-checked-color: $text-color;
+$disabled-switch-color: #9f9f9f;
+$disabled-slider-color: #cfcfcf;
+$error-color: #e02020;
+$disable-color: #dbdbdb;
+$error-background-color: transparent;
+$answer-background-color: transparent;
+$header-height: 50%;
+$font-size: $font-size-root;
+$add-button-color: #214e88;
+$clean-button-color: $add-button-color;
+$remove-button-color: #e02020;
+$base-line-height: 2em;
+$disabled-text-color: rgba(64, 64, 64, 0.5);
+$text-placeholder: #999999;
+
+@import "survey-library/src/modern/blocks/sv-visuallyhidden.scss";
+@import "survey-library/src/modern/blocks/sv-hidden.scss";
+@import "survey-library/src/modern/blocks/sv-window.scss";
+@import "survey-library/src/modern/blocks/sv-container.scss";
+@import "survey-library/src/modern/blocks/sv-body.scss";
+@import "survey-library/src/modern/blocks/sv-page.scss";
+@import "survey-library/src/modern/blocks/sv-panel.scss";
+@import "survey-library/src/modern/blocks/sv-paneldynamic.scss";
+@import "survey-library/src/modern/blocks/sv-row.scss";
+@import "survey-library/src/modern/blocks/sv-question.scss";
+@import "survey-library/src/modern/blocks/sv-progress.scss";
+@import "survey-library/src/modern/blocks/sv-titile.scss";
+@import "survey-library/src/modern/blocks/sv-description.scss";
+@import "survey-library/src/modern/blocks/sv-selectbase.scss";
+@import "survey-library/src/modern/blocks/sv-multipletext.scss";
+@import "survey-library/src/modern/blocks/sv-matrix.scss";
+@import "survey-library/src/modern/blocks/sv-matrixdynamic.scss";
+@import "survey-library/src/modern/blocks/sv-scroll.scss";
+@import "survey-library/src/modern/blocks/sv-table.scss";
+@import "survey-library/src/modern/blocks/sv-footer.scss";
+@import "survey-library/src/modern/blocks/sv-btn.scss";
+@import "survey-library/src/modern/blocks/sv-item.scss";
+@import "survey-library/src/modern/blocks/sv-checkbox.scss";
+@import "survey-library/src/modern/blocks/sv-radio.scss";
+@import "survey-library/src/modern/blocks/sv-boolean.scss";
+@import "survey-library/src/modern/blocks/sv-imagepicker.scss";
+@import "survey-library/src/modern/blocks/sv-dropdown.scss";
+@import "survey-library/src/modern/blocks/sv-text.scss";
+@import "survey-library/src/modern/blocks/sv-rating.scss";
+@import "survey-library/src/modern/blocks/sv-comment.scss";
+@import "survey-library/src/modern/blocks/sv-file.scss";
+@import "survey-library/src/modern/blocks/sv-clearfix.scss";
+@import "survey-library/src/modern/blocks/sv-completedpage.scss";
+@import "survey-library/src/modern/blocks/sv-header.scss";
+@import "survey-library/src/signaturepad.scss";
+
+.sv-title,
+.sv-table__cell--header,
+.sv-completedpage {
+  font-family: $font-family;
+}
+
+.sv-radio__svg,
+.sv-checkbox__svg {
+  fill: transparent !important;
+}
+
+.sv-radio--checked .sv-radio__svg {
+  fill: $main-color !important;
+  border-color: $main-color;
+}
+.sv-checkbox--checked .sv-checkbox__svg {
+  fill: white !important;
+}
+
+.sv-text {
+  border: 0.07em solid $border-color;
+  border-radius: 1px;
+  ::placeholder {
+    color: $text-placeholder;
+  }
+  :-ms-input-placeholder {
+    color: $text-placeholder;
+  }
+  ::-ms-input-placeholder {
+    color: $text-placeholder;
+  }
+  &[aria-invalid="true"] {
+    color: $error-color;
+    border-color: $error-color;
+  }
+}
+
+.sv-comment {
+  border-radius: 1px;
+  &[aria-invalid="true"] {
+    color: $error-color;
+    border-color: $error-color;
+  }
+}
+
+.sv-dropdown {
+  border: 0.07em solid $border-color;
+  border-radius: 1px;
+  &[aria-invalid="true"] {
+    color: $error-color;
+    border-color: $error-color;
+  }
+}
+
+.sv-question__content div[class=""] {
+  display: block;
+  width: 100%;
+}
+
+.sv-boolean {
+  &__switch {
+    background-color: $main-color;
+  }
+  &__slider {
+    background-color: white;
+  }
+  &__label--disabled {
+    color: $disable-color;
+  }
+  &--disabled {
+    .sv-boolean__switch {
+      background-color: $disabled-switch-color;
+    }
+    .sv-boolean__slider {
+      background-color: $disabled-slider-color;
+    }
+  }
+}
+
+.sv-question__erbox {
+  display: block;
+  min-width: 100%;
+}
+
+.sv-question__title {
+  font-size: 1.1em;
+}
+
+.sv-row:not(:last-child) {
+  padding-bottom: 1.5em;
+}
+
+.sv-footer {
+  min-height: 1em;
+  padding: 1em 0 2.3em 0;
+}
+
+.sv-body__footer .sv-btn.sv-footer__complete-btn {
+  // TODO: Temporary styles
+  display: block !important;
+  margin: 0px auto !important;
+  float: none !important;
+}
+
+.sv-container-modern__title {
+  padding-top: 1em;
+  padding-bottom: 0;
+}
+
+.sv-completedpage {
+  background-color: white;
+  font-size: 1.4em;
+}
+
+.sv-completedpage::before {
+  margin-bottom: 20px;
+}
